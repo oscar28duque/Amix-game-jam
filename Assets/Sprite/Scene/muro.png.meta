@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d8354e6d102574142ac489c52f5a941a
+guid: 09af8f4f8733bad4c9a6cc1e5a99c121
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7706448014210033366
-    second: Bombillo apagado_0
+      213: -6691545804593780711
+    second: muro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bombillo apagado_0
+      name: muro_0
       rect:
         serializedVersion: 2
-        x: 126
-        y: 68
-        width: 260
-        height: 377
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d6e00f63adc2fa60800000000000000
-      internalID: 7706448014210033366
+      spriteID: 918aee64b8ad223a0800000000000000
+      internalID: -6691545804593780711
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bombillo apagado_0: 7706448014210033366
+      muro_0: -6691545804593780711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

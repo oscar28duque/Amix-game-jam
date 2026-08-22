@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Bombillo prendido_3
+  m_Name: muro_0
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 3877383158512310919, guid: ee31a1ec5c5ab07429f269aeb51b2df7, type: 3}
+  m_Sprite: {fileID: -6691545804593780711, guid: 09af8f4f8733bad4c9a6cc1e5a99c121, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
