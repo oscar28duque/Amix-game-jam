@@ -11,6 +11,9 @@ public class Script : MonoBehaviour
     public GameObject prefabOnda;
     public Transform puntoGeneracion;
 
+    public int cantidadBalas = 36;
+    public float anguloPaso = 5f;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -31,8 +34,14 @@ public class Script : MonoBehaviour
 
     void LanzarOnda()
     {
-        Vector3 posicion = puntoGeneracion != null ? puntoGeneracion.position : transform.position;
-        Instantiate(prefabOnda, posicion, Quaternion.identity);
+        Vector3 posicion = puntoGeneracion != null ? puntoGeneracion.position : transform.position; 
+        float anguloActual = 0f;
+        for (int i = 0; i < cantidadBalas; i++)
+        {
+            Quaternion rotacion = Quaternion.Euler(0, 0, anguloActual);
+            Instantiate(prefabOnda, posicion, rotacion);
+            anguloActual += anguloPaso;
+        }
     }
 
     void FixedUpdate()
