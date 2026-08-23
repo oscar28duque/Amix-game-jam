@@ -13,8 +13,16 @@ public class playerscript : MonoBehaviour
     [SerializeField] Vector2 centroLimites = Vector2.zero;
     [SerializeField] Vector2 tamanoLimites = new Vector2(10f, 10f);
 
+    [Header("Configurar sonido de pasos")]
+
+    [SerializeField] AudioClip stepsSound;
+
+    [SerializeField] AudioSource audioSource;
+
+    [SerializeField] float intervaloPasos = 0.35f;
     public GameObject prefabOnda;
     public Transform puntoGeneracion;
+    private float tiempoProximoPaso = 0f;
 
     public int cantidadBalas = 36;
     public float anguloPaso = 5f;
@@ -34,6 +42,7 @@ public class playerscript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
         CalcularLimites();
     }
 
@@ -56,6 +65,20 @@ public class playerscript : MonoBehaviour
         {
             LanzarOnda();
             tiempoProximoDisparo = Time.time + tiempoCooldown;
+        }
+       
+        if (move != Vector2.zero)
+        {
+            ManejarSonidoPasos();
+        }
+    }
+
+    void ManejarSonidoPasos()
+    {
+        if (Time.time >= tiempoProximoPaso)
+        {
+            audioSource.PlayOneShot(stepsSound);
+            tiempoProximoPaso = Time.time + intervaloPasos;
         }
     }
     void LanzarOnda()
