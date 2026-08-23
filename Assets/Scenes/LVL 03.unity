@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Victoria
   panelVictoria: {fileID: 997429078}
-  tiempoMaximo: 10
+  tiempoMaximo: 14
   textoTiempo: {fileID: 1796317641}
   panelTiempoAgotado: {fileID: 343164624}
   tiempoMostrarPanel: 2
