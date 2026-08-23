@@ -30,9 +30,11 @@ public class playerscript : MonoBehaviour
     float minX, maxX, minY, maxY;
 
     private void Start()
+
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        CalcularLimites();
     }
 
     private void Update()
@@ -41,7 +43,6 @@ public class playerscript : MonoBehaviour
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
 
-        CalcularLimites();
         // 2. Filtrar el input para que no acepte más movimiento si toca los bordes
         move = FiltrarInputPorLimites(inputX, inputY);
 
