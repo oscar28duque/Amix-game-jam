@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class playerscript : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class playerscript : MonoBehaviour
     [Header("Configuración de Límites (Gizmo)")]
     [SerializeField] Vector2 centroLimites = Vector2.zero;
     [SerializeField] Vector2 tamanoLimites = new Vector2(10f, 10f);
+
+    public GameObject prefabOnda;
+    public Transform puntoGeneracion;
+
+    public int cantidadBalas = 36;
+    public float anguloPaso = 5f;
+
+    public float tiempoCooldown = 1f;
+    private float tiempoProximoDisparo = 0f;
 
     Vector2 move;
     Vector2 targetVelocity;
@@ -40,6 +50,23 @@ public class playerscript : MonoBehaviour
         //3. Animator 
         anim.SetFloat("Horizontal", move.x);
         anim.SetFloat("Vertical", move.y);
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && Time.time >= tiempoProximoDisparo)
+        {
+            LanzarOnda();
+            tiempoProximoDisparo = Time.time + tiempoCooldown;
+        }
+    }
+    void LanzarOnda()
+    {
+        Vector3 posicion = puntoGeneracion != null ? puntoGeneracion.position : transform.position;
+        float anguloActual = 0f;
+        for (int i = 0; i < cantidadBalas; i++)
+        {
+            Quaternion rotacion = Quaternion.Euler(0, 0, anguloActual);
+            Instantiate(prefabOnda, posicion, rotacion);
+            anguloActual += anguloPaso;
+        }
     }
 
     private void CalcularLimites()
