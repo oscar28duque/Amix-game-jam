@@ -6,6 +6,7 @@ public class playerscript : MonoBehaviour
     [SerializeField] float maxspeed;
     [SerializeField] float deceleration;
     [SerializeField] float acceleration;
+    [SerializeField] Animator anim; 
 
     [Header("Configuración de Límites (Gizmo)")]
     [SerializeField] Vector2 centroLimites = Vector2.zero;
@@ -31,7 +32,12 @@ public class playerscript : MonoBehaviour
         move = FiltrarInputPorLimites(inputX, inputY);
 
         Debug.Log(move);
+
+        //3. Animator 
+        anim.SetFloat("Horizontal", move.x);
+        anim.SetFloat("Vertical", move.y);
     }
+
 
     private Vector2 FiltrarInputPorLimites(float inputX, float inputY)
     {
