@@ -4,16 +4,17 @@ using UnityEngine.SceneManagement;
 public class Victoria : MonoBehaviour
 {
     public static Victoria Instance;
-    
-    [Header("Configuración Victoria")]
-    public GameObject panelVictoria;
-    public string nombreSiguienteEscena = "Nivel 2";
+
+    [Header("Configuración de Victoria")]
+    public GameObject panelVictoria; 
+    public string nombreSiguienteEscena = "tutorial 2";
+    public float tiempoEsperaCambioEscena = 2f;
 
     private Bombillos[] listaBombillos;
 
     void Awake()
     {
-        if (Instance != null)
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -42,17 +43,19 @@ public class Victoria : MonoBehaviour
                 return;
             }
         }
-        Victory();
+
+        Ganaste();
     }
 
-    void Victory()
+    void Ganaste()
     {
         Debug.Log("¡Todos los bombillos encendidos!");
         
         if (panelVictoria != null)
         {
-            panelVictoria.SetActive(true);
+            panelVictoria.SetActive(true); 
         }
+
         Time.timeScale = 0f;
     }
 
