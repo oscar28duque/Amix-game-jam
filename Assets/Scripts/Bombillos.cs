@@ -30,6 +30,11 @@ public class Bombillos : MonoBehaviour
         }
     }
 
+    public bool EstaEncendido()
+    {
+        return isEncendido;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<BalaOnda>() != null)
@@ -53,6 +58,11 @@ public class Bombillos : MonoBehaviour
             imagenProgreso.gameObject.SetActive(true);
             imagenProgreso.fillAmount = 1f;
         }
+        
+        if (Victoria.Instance != null)
+        {
+            Victoria.Instance.ComprobarVictoria();
+        }
     }   
 
     void Update()
@@ -70,6 +80,7 @@ public class Bombillos : MonoBehaviour
             }
         }
     }
+
     private void Apagar()
     {
         isEncendido = false;

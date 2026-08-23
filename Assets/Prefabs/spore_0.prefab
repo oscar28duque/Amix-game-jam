@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BalaOnda
   velocidad: 3.5
-  duracion: 0.9
+  duracion: 0.65
