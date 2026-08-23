@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 22b6cce6eb8172f46b2f28d4828b3aff
+guid: 12e45cef1d2a9414596176135584f86d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4056418701593074829
-    second: wasd_keyboard_0
+      213: -8795586754700112126
+    second: spore_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wasd_keyboard_0
+      name: spore_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 38
-        height: 24
+        y: 0
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3732b47cea4b4b7c0800000000000000
-      internalID: -4056418701593074829
+      spriteID: 20f08f6927ccfe580800000000000000
+      internalID: -8795586754700112126
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wasd_keyboard_0: -4056418701593074829
+      spore_0: -8795586754700112126
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
