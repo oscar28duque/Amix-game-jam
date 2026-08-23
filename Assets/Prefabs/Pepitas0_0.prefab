@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f0385b56bb6f43aaa174f80f27b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BalaOnda
-  velocidad: 5
-  duracion: 1.5
+  velocidad: 3.5
+  duracion: 0.9
 --- !u!58 &986922061879810894
 CircleCollider2D:
   m_ObjectHideFlags: 0

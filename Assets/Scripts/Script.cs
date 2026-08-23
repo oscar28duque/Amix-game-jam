@@ -14,6 +14,9 @@ public class Script : MonoBehaviour
     public int cantidadBalas = 36;
     public float anguloPaso = 5f;
 
+    public float tiempoCooldown= 1f;
+    private float tiempoProximoDisparo = 0f;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -26,9 +29,10 @@ public class Script : MonoBehaviour
 
         movementInput = movementInput.normalized;
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && Time.time >= tiempoProximoDisparo)
         {
             LanzarOnda();
+            tiempoProximoDisparo = Time.time + tiempoCooldown;
         }
     }
 
