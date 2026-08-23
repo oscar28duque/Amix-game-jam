@@ -16,4 +16,8 @@ public class MenuSystem : MonoBehaviour
         Debug.Log("Saliendo del juego");
         Application.Quit();
     }
+     public void VolverMenu()
+     {
+        SceneManager.LoadScene(0);  
+     }
 }
