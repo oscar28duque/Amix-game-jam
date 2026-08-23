@@ -59,7 +59,7 @@ public class Bombillos : MonoBehaviour
     {
         if(isEncendido)
         {
-            tiempoRestante -= tiempoEncendido.deltaTime;
+            tiempoRestante -= Time.deltaTime;
             if(imagenProgreso != null)
             {
                 imagenProgreso.fillAmount = tiempoRestante/tiempoEncendido;
