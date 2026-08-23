@@ -28,6 +28,7 @@ public class Bombillos : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSourceOn = GetComponent<AudioSource>();
+        audioSourceOff = GetComponent<AudioSource>();
 
         if (spriteRenderer != null)
         {
