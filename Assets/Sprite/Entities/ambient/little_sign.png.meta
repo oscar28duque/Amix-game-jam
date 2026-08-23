@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 22b6cce6eb8172f46b2f28d4828b3aff
+guid: 8dbf8031b5198fc4493d67b042894c5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4056418701593074829
-    second: wasd_keyboard_0
+      213: 6790045855306992629
+    second: little_sign_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wasd_keyboard_0
+      name: little_sign_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 38
-        height: 24
+        y: 0
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3732b47cea4b4b7c0800000000000000
-      internalID: -4056418701593074829
+      spriteID: 5fbcf2eeab61b3e50800000000000000
+      internalID: 6790045855306992629
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wasd_keyboard_0: -4056418701593074829
+      little_sign_0: 6790045855306992629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
