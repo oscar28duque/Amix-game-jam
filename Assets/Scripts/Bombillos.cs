@@ -14,10 +14,21 @@ public class Bombillos : MonoBehaviour
     private Sprite bombilloApagado;     
     private bool isEncendido = false;
     private float tiempoRestante = 0f;
+
+    [Header("Efectos de Sonido")]
+    public AudioClip sonidoEncender;
+    private AudioSource audioSourceOn;
+
+    public AudioClip sonidoApagar;
+    private AudioSource audioSourceOff;
+
+    private bool disponibleSonido = true;
     
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSourceOn = GetComponent<AudioSource>();
+
         if (spriteRenderer != null)
         {
             bombilloApagado = spriteRenderer.sprite;
@@ -42,10 +53,22 @@ public class Bombillos : MonoBehaviour
             Encender();
         }
     }
+
+    private void ActivarSonido()
+    {
+        disponibleSonido = true;
+    }
+
     private void Encender()
     {
         isEncendido = true;
-        
+        if (isEncendido && audioSourceOn != null && sonidoEncender != null && disponibleSonido)
+        {
+            disponibleSonido = false;
+            audioSourceOn.PlayOneShot(sonidoEncender);
+            Invoke("ActivarSonido",1f); 
+        }
+
         if (bombilloEncendido != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = bombilloEncendido;
@@ -77,6 +100,9 @@ public class Bombillos : MonoBehaviour
             if(tiempoRestante <= 0)
             {
                 Apagar();
+                
+                audioSourceOff.PlayOneShot(sonidoApagar);
+
             }
         }
     }
