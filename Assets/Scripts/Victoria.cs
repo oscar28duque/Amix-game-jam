@@ -9,7 +9,6 @@ public class Victoria : MonoBehaviour
 
     [Header("Configuración de Victoria")]
     public GameObject panelVictoria;
-    public string nombreSiguienteEscena = "tutorial 2";
 
     [Header("Configuración de Tiempo")]
     public float tiempoMaximo = 60f;
@@ -67,9 +66,11 @@ public class Victoria : MonoBehaviour
         juegoTerminado = true;
         Debug.Log("¡Se acabó el tiempo!");
 
-        if (panelTiempoAgotado != null) panelTiempoAgotado.SetActive(true);
+        if (panelTiempoAgotado != null)
+            panelTiempoAgotado.SetActive(true);
 
         Time.timeScale = 0f;
+
         yield return new WaitForSecondsRealtime(tiempoMostrarPanel);
 
         Time.timeScale = 1f;
@@ -91,7 +92,8 @@ public class Victoria : MonoBehaviour
         juegoTerminado = true;
         Debug.Log("¡Todos los bombillos encendidos!");
 
-        if (panelVictoria != null) panelVictoria.SetActive(true);
+        if (panelVictoria != null)
+            panelVictoria.SetActive(true);
 
         Time.timeScale = 0f;
     }
@@ -99,6 +101,9 @@ public class Victoria : MonoBehaviour
     public void CargarSiguienteNivel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(nombreSiguienteEscena);
+
+        int siguienteEscena = SceneManager.GetActiveScene().buildIndex + 1;
+
+        SceneManager.LoadScene(siguienteEscena);
     }
 }
