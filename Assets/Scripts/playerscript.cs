@@ -13,13 +13,17 @@ public class playerscript : MonoBehaviour
     [SerializeField] Vector2 centroLimites = Vector2.zero;
     [SerializeField] Vector2 tamanoLimites = new Vector2(10f, 10f);
 
-    [Header("Configurar sonido de pasos")]
+    [Header("Configurar sonido")]
 
     [SerializeField] AudioClip stepsSound;
 
+    [SerializeField] AudioClip shootSound;
+ 
     [SerializeField] AudioSource audioSource;
 
     [SerializeField] float intervaloPasos = 0.35f;
+
+    [Header("Configurar disparo")]
     public GameObject prefabOnda;
     public Transform puntoGeneracion;
     private float tiempoProximoPaso = 0f;
@@ -83,6 +87,10 @@ public class playerscript : MonoBehaviour
     }
     void LanzarOnda()
     {
+        if (audioSource != null && shootSound != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
         Vector3 posicion = puntoGeneracion != null ? puntoGeneracion.position : transform.position;
         float anguloActual = 0f;
         for (int i = 0; i < cantidadBalas; i++)
