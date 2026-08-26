@@ -4,6 +4,7 @@ public class BalaOnda : MonoBehaviour
 {
     public float velocidad = 5f;
     public float duracion = 2f;
+    
     void Start()
     {
         Destroy(gameObject, duracion);

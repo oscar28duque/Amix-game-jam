@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Web - Desktop - Development
+  m_Name: Web - Desktop - Release 1
   m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfile
   m_AssetVersion: 2
   m_BuildTarget: 20
   m_Subtarget: 0
   m_PlatformId: 84a3bb9e7420477f885e98145999eb20
   m_PlatformBuildProfile:
-    rid: 9051731088044458056
+    rid: 9051731122574589952
   m_ActivePlatformGuid: 
   m_AdditionalPlatformBuildSettings: []
   m_OverrideGlobalSceneList: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     - line: '| PlayerSettings:'
     - line: '|   m_ObjectHideFlags: 0'
     - line: '|   serializedVersion: 29'
-    - line: '|   productGUID: f34ec06245da88e41b4961ecdb87ee9d'
+    - line: '|   productGUID: 0e5ca0947a580964082b684cdc3bc34d'
     - line: '|   AndroidProfiler: 0'
     - line: '|   AndroidFilterTouchesWhenObscured: 0'
     - line: '|   AndroidEnableSustainedPerformanceMode: 0'
@@ -38,7 +38,7 @@ MonoBehaviour:
     - line: '|   useOnDemandResources: 0'
     - line: '|   accelerometerFrequency: 60'
     - line: '|   companyName: DefaultCompany'
-    - line: '|   productName: "Bogot\xE1 2D"'
+    - line: '|   productName: game jam'
     - line: '|   defaultCursor: {instanceID: 0}'
     - line: '|   cursorHotspot: {x: 0, y: 0}'
     - line: '|   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b:
@@ -69,8 +69,8 @@ MonoBehaviour:
     - line: '|   m_VirtualRealitySplashScreen: {instanceID: 0}'
     - line: '|   defaultScreenWidth: 1920'
     - line: '|   defaultScreenHeight: 1080'
-    - line: '|   defaultScreenWidthWeb: 960'
-    - line: '|   defaultScreenHeightWeb: 600'
+    - line: '|   defaultScreenWidthWeb: 1280'
+    - line: '|   defaultScreenHeightWeb: 720'
     - line: '|   m_StereoRenderingPath: 0'
     - line: '|   m_ActiveColorSpace: 1'
     - line: '|   unsupportedMSAAFallback: 0'
@@ -175,9 +175,7 @@ MonoBehaviour:
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
     - line: '|   bundleVersion: 1.0'
-    - line: '|   preloadedAssets:'
-    - line: '|   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
-        type: 3}'
+    - line: '|   preloadedAssets: []'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   xboxOneDisableKinectGpuReservation: 1'
@@ -327,10 +325,7 @@ MonoBehaviour:
     - line: '|   androidSymbolsSizeThreshold: 800'
     - line: '|   m_BuildTargetIcons: []'
     - line: '|   m_BuildTargetPlatformIcons: []'
-    - line: '|   m_BuildTargetBatching:'
-    - line: '|   - m_BuildTarget: WebGL'
-    - line: '|     m_StaticBatching: 0'
-    - line: '|     m_DynamicBatching: 0'
+    - line: '|   m_BuildTargetBatching: []'
     - line: '|   m_BuildTargetShaderSettings: []'
     - line: '|   m_BuildTargetGraphicsJobs: []'
     - line: '|   m_BuildTargetGraphicsJobMode: []'
@@ -350,10 +345,7 @@ MonoBehaviour:
     - line: '|   m_BuildTargetGroupLightmapSettings: []'
     - line: '|   m_BuildTargetGroupLoadStoreDebugModeSettings: []'
     - line: '|   m_BuildTargetNormalMapEncoding: []'
-    - line: '|   m_BuildTargetDefaultTextureCompressionFormat:'
-    - line: '|   - serializedVersion: 3'
-    - line: '|     m_BuildTarget: WebGL'
-    - line: '|     m_Formats: 05000000'
+    - line: '|   m_BuildTargetDefaultTextureCompressionFormat: []'
     - line: '|   playModeTestRunnerEnabled: 0'
     - line: '|   runPlayModeTestAsEditModeTest: 0'
     - line: '|   actionOnDotNetUnhandledException: 1'
@@ -616,19 +608,22 @@ MonoBehaviour:
     - line: '|   webGLMemoryGeometricGrowthStep: 0.2'
     - line: '|   webGLMemoryGeometricGrowthCap: 96'
     - line: '|   webGLPowerPreference: 2'
-    - line: '|   webGLWebAssemblyTable: 0'
-    - line: '|   webGLWebAssemblyBigInt: 0'
+    - line: '|   webGLWebAssemblyTable: 1'
+    - line: '|   webGLWebAssemblyBigInt: 1'
     - line: '|   webGLCloseOnQuit: 0'
-    - line: '|   webWasm2023: 0'
+    - line: '|   webWasm2023: 1'
     - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
     - line: '|   scriptingDefineSymbols:'
-    - line: '|     WebGL: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY'
+    - line: '|     Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY'
+    - line: '|     WebGL: APP_UI_EDITOR_ONLY;SENTIS_ANALYTICS_ENABLED'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'
     - line: '|     Android: 1'
-    - line: '|   il2cppCompilerConfiguration: {}'
-    - line: '|   il2cppCodeGeneration: {}'
+    - line: '|   il2cppCompilerConfiguration:'
+    - line: '|     WebGL: 2'
+    - line: '|   il2cppCodeGeneration:'
+    - line: '|     WebGL: 1'
     - line: '|   il2cppLTOMode: {}'
     - line: '|   il2cppStacktraceInformation: {}'
     - line: '|   managedStrippingLevel: {}'
@@ -644,14 +639,14 @@ MonoBehaviour:
     - line: '|   editorAssembliesCompatibilityLevel: 1'
     - line: '|   m_RenderingPath: 1'
     - line: '|   m_MobileRenderingPath: 1'
-    - line: '|   metroPackageName: "Bogot\xE1 2D"'
+    - line: '|   metroPackageName: game jam'
     - line: '|   metroPackageVersion: '
     - line: '|   metroCertificatePath: '
     - line: '|   metroCertificatePassword: '
     - line: '|   metroCertificateSubject: '
     - line: '|   metroCertificateIssuer: '
     - line: '|   metroCertificateNotAfter: 0000000000000000'
-    - line: '|   metroApplicationDescription: "Bogot\xE1 2D"'
+    - line: '|   metroApplicationDescription: game jam'
     - line: '|   wsaImages: {}'
     - line: '|   metroTileShortName: '
     - line: '|   metroTileShowName: 0'
@@ -745,10 +740,10 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 9051731088044458056
+    - rid: 9051731122574589952
       type: {class: WebGLPlatformSettings, ns: UnityEditor.WebGL, asm: UnityEditor.WebGL.Extensions}
       data:
-        m_Development: 1
+        m_Development: 0
         m_ConnectProfiler: 0
         m_BuildWithDeepProfilingSupport: 0
         m_BuildWithCodeCoverage: 0
@@ -763,27 +758,7 @@ MonoBehaviour:
         m_InsightsSettingsContainer:
           m_BuildProfileEngineDiagnosticsState: 2
         m_AdaptivePerformanceEnabled: 0
-        m_CodeOptimization: 0
+        m_CodeOptimization: 3
         m_WebGLClientBrowserPath: 
         m_WebGLClientBrowserType: 0
         m_WebGLTextureSubtarget: 1
---- !u!114 &4861824395387637981
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 15012, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BuildAutomationSettings
-  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildAutomationSettings
-  m_OperatingSystemValue: 
-  m_OperatingSystemFamily: 
-  m_XcodeVersion: 
-  m_AndroidSdkVersion: 
-  m_UnityArchitecture: 
-  m_MachineTypeId: 
-  m_CredentialsId: 
-  m_BuildTarget: 20
